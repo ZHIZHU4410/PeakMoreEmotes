@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <Version>1.1.1</Version>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <GameDir Condition="'$(GameDir)' == ''">$(PEAK_GAME_DIR)</GameDir>
+  </PropertyGroup>
+  <Target Name="ValidateGameReferences" BeforeTargets="ResolveAssemblyReferences">
+    <Error Condition="'$(GameDir)' == ''" Text="Set PEAK_GAME_DIR or pass -p:GameDir=PATH to your own PEAK installation." />
+    <Error Condition="!Exists('$(GameDir)/PEAK_Data/Managed/Assembly-CSharp.dll')" Text="PEAK managed assemblies were not found under GameDir." />
+    <Error Condition="!Exists('$(GameDir)/BepInEx/core/BepInEx.dll')" Text="Install BepInExPack_PEAK under GameDir before building." />
+    <Error Condition="!Exists('$(GameDir)/BepInEx/core/0Harmony.dll')" Text="0Harmony.dll was not found under GameDir/BepInEx/core." />
+  </Target>
+  <ItemGroup>
+    <Compile Include="Plugin.cs" />
+    <Compile Include="RepoRetarget.cs" />
+    <Reference Include="$(GameDir)/PEAK_Data/Managed/Assembly-CSharp.dll;$(GameDir)/PEAK_Data/Managed/UnityEngine*.dll;$(GameDir)/PEAK_Data/Managed/Photon*.dll;$(GameDir)/PEAK_Data/Managed/Unity.TextMeshPro.dll;$(GameDir)/PEAK_Data/Managed/Zorro*.dll"><Private>false</Private></Reference>
+    <Reference Include="$(GameDir)/BepInEx/core/BepInEx.dll"><Private>false</Private></Reference>
+    <Reference Include="$(GameDir)/BepInEx/core/0Harmony.dll"><Private>false</Private></Reference>
+  </ItemGroup>
+</Project>

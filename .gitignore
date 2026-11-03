@@ -1,0 +1,12 @@
+**/bin/
+**/obj/
+dist/
+.vs/
+.idea/
+__pycache__/
+*.user
+*.suo
+*.log
+*.cfg
+.env
+.env.*

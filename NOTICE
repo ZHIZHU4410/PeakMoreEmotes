@@ -1,0 +1,24 @@
+PeakMoreEmotes 1.1.1
+
+This is an independent, unofficial PEAK adaptation.
+
+SomeEmotesREPO 2.0.1
+Original project: ImGogole / d4liln
+https://github.com/d4liln/some-emotes-repo
+https://thunderstore.io/c/repo/p/ImGogole/SomeEmotesREPO/
+Repository license: Apache License, Version 2.0.
+The bundled repo_emotes.bundle is the repository's Emotes/emotes file.
+Git blob: 7d0f55ceda8d4e5305e519da3a85104485d94ab8
+Changes in this project: PEAK-specific runtime pose retargeting, fixed-step
+physics pose integration, native wheel entries, localization and generated icons.
+The upstream asset bundle itself has not been modified. The REPO plugin DLL
+and R.E.P.O. retail game files are not included.
+
+WaporVave, copyright (c) 2025
+Fortnite Default Dance Emote 1.0.1, Twerk Emote 1.0.0,
+MiddleFingerEmote 1.0.0 and PEAKEmoteLib design reference.
+MIT license notices are preserved in licenses/ (source) and
+plugins/PeakMoreEmotes/licenses/ (runtime package).
+
+PEAK, BepInEx and Harmony are owned by their respective authors.
+This package does not imply endorsement by upstream authors or game developers.

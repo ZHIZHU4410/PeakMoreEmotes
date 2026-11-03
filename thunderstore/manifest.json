@@ -1,0 +1,9 @@
+{
+  "name": "PeakMoreEmotes",
+  "version_number": "1.1.1",
+  "website_url": "https://github.com/ZHIZHU4410/PeakMoreEmotes",
+  "description": "35 extra emote options on the native R wheel: 27 imported dances/poses, 7 pages and 51 total choices. Chinese/English names, mouse-wheel paging, and physics-synced playback with the 1.1.1 jitter fix.",
+  "dependencies": [
+    "BepInEx-BepInExPack_PEAK-5.4.75301"
+  ]
+}
